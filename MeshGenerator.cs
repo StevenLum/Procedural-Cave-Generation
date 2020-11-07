@@ -352,6 +352,7 @@ public class MeshGenerator : MonoBehaviour
 		public Node centreTop, centreRight, centreBottom, centreLeft;
 		public int configuration;
 
+        
 		public Square(ControlNode _topLeft, ControlNode _topRight, ControlNode _bottomRight, ControlNode _bottomLeft)
 		{
 			topLeft = _topLeft;
@@ -373,7 +374,8 @@ public class MeshGenerator : MonoBehaviour
 			if (bottomLeft.active)
 				configuration += 1;
 		}
-	}
+		
+    }
 
 	public class Node
 	{
@@ -396,7 +398,7 @@ public class MeshGenerator : MonoBehaviour
 		{
 			active = _active;
 			above = new Node(position + Vector3.forward * squareSize / 2f);
-			right = new Node(position + Vector3.right * squareSize / 2f);
+			right = new Node(position + Vector3.right * squareSize / 2f);	
 		}
 
 	}
